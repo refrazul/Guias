@@ -25,7 +25,5 @@ $ docker run -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.el
 
 Accedemos a la url http://localhost:9200/ y tenemos que ver algo como esto
 
-<img href="elastic_validar.png"/>
-
-
+<img src="elastic_validar.png" alt="elastic_validar"/>
 
