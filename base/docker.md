@@ -6,49 +6,49 @@ Primero, actualice su lista de paquetes existente:
 Una vez dentro ingresar el comando para cambiar al usuario de aplicación
 
 ```bash
-sudo apt update
+$ sudo apt update
 ```
 
 Rquerimientos previos
 
 ```bash
-sudo apt install apt-transport-https ca-certificates curl software-properties-common
+$ sudo apt install apt-transport-https ca-certificates curl software-properties-common
 
 ```
 
 Cargamos la llave GPG oficial de docker
 ```bash
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
 ```
 
 Actualizamos la base 
 
 ```bash
-sudo apt update
+$ sudo apt update
 ```
 
 Aseguramos que se a instalar Docker de los repos oficiales
 
 ```bash
-apt-cache policy docker-ce
+$ apt-cache policy docker-ce
 ```
 
 Instalamos Docker
 
 ```bash
-sudo apt install docker-ce
+$ sudo apt install docker-ce
 ```
 
 Verificamos que docker este corriendo
 ```bash
-sudo systemctl status docker
+$ sudo systemctl status docker
 ```
 
 Si esta corriendo vemos el mensaje
 
 ```bash
-sudo systemctl status docker
+$ sudo systemctl status docker
 ```
 
 ```
@@ -68,18 +68,18 @@ sudo systemctl status docker
 Agregue su nombre de usuario al grupo docker si quiere evitar escribir sudo siempre que deba ejecutar el comando docker:
 
 ```bash
-sudo usermod -aG docker ${USER}
+$ sudo usermod -aG docker ${USER}
 ```
 
 Para aplicar la nueva membresía de grupo, debe cerrar sesión en el servidor y volver a iniciarla, o puede escribir lo siguiente:
 
 ```bash
-su - ${USER}
+$ su - ${USER}
 ```
 Se le pedirá que ingrese la contraseña de su usuario para poder continuar.
 
 Confirme que se haya agregado su usuario al grupo de docker escribiendo:
 
 ```bash
-id -nG
+$ id -nG
 ```
